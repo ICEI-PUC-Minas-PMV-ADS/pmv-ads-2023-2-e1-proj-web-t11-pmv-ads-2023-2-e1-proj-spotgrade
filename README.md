@@ -1,25 +1,26 @@
-# Título do Projeto
+# SpotGrade
 
-`CURSO`
+`Analise e Desenvolvimento de Sistemas`
 
 `DISCIPLINA`
 
-`SEMESTRE`
+`02-2023`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto desenvolvido.
+Sistema de avaliação de estabelecimentos( frontend).
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Filipe Lopes Gervasio 
+* Kênia Aparecida Caires Cardoso 
+* Ângelo Alvares de Abreu 
+* Breno Vinicius 
+* Bruna Fachola 
+* Ygor Pedroso 
+* Alexsandra Karine Silva 
 
 ## Orientador
 
-* Nome completo do professor
+* Clóvis Lemos Tavares
 
 # Documentação
 
