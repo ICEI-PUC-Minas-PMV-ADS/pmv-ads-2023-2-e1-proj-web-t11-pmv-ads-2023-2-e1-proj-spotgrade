@@ -4,37 +4,37 @@
 
 | | Enzo - 22 anos |
 |--------------------|-------|
-| Descrição | Jovem solteiro; gosta de descobrir bares novos com os amigos na cidade onde mora; tem alta familiaridade com tecnologia |
+| Descrição | Jovem solteiro. gosta de descobrir bares novos com os amigos na cidade onde mora. tem alta familiaridade com tecnologia |
 | Necessidades | Descobrir rápido se o bar que pretende ir, atende os seus pontos de preferência  |
 
 | | Marina - 33 anos |
 |--------------------|-------|
-| Descrição | Casada; dois filhos de sete e nove anos respectivamente; gosta de frequentar restaurantes aos finais de semana com a família e amigos, principalmente em comemorações; usuária casual de tecnologia no geral |
+| Descrição | Casada. dois filhos de sete e nove anos respectivamente. gosta de frequentar restaurantes aos finais de semana com a família e amigos, principalmente em comemorações. usuária casual de tecnologia no geral |
 | Necessidades | Saber com segurança se um restaurante possui recreação ou se é amigável para crianças |
 
 | | Clésio - 54 anos |
 |--------------------|-------|
-| Descrição | Casado; um filho de 23 anos; começou a se interessar por teatro recentemente; não possui muita familiaridade com tecnologia |
+| Descrição | Casado. um filho de 23 anos. começou a se interessar por teatro recentemente. não possui muita familiaridade com tecnologia |
 | Necessidades | Gosta de saber todos os detalhes possíveis de um lugar antes de ir e gosta de conferir se os lugares que já conhece, mas não visita há algum tempo, mudaram alguma coisa |
 
 | | Pedro - 28 anos |
 |--------------------|-------|
-| Descrição | Solteiro; sem filhos; não perde nenhum lançamento dos cinemas; alto conhecimento de tecnologia |
-| Necessidades | ... |
+| Descrição | Solteiro. sem filhos. Gosta de ir esporadicamente os lançamento dos cinemas. alta familiaridade com tecnologia |
+| Necessidades | Saber quais são as melhores salas de cinema para ver os filmes já que não vai com muita frequencia e não acompanha as mudanças nos cinemas de onde mora. |
 
 | | Luiza - 42 anos |
 |--------------------|-------|
-| Descrição | Casada; sem filhos; viaja muito a trabalho; média familiaridade com tecnologia; |
+| Descrição | Casada. sem filhos. viaja muito a trabalho. média familiaridade com tecnologia. |
 | Necessidades | Ela viaja bastante devido ao trabalho e precisa escolher o hotel com melhor custo-benefício, tanto em preço quanto em localidade. |
 
-| | Perfil Nome |
+| | Jones - 28 anos |
 |--------------------|-------|
-| Descrição | [WIP - pessoa interessada em shoping] |
-| Necessidades | Saber os melhores shoppings com melhor estacionamento; praça de alimentação; |
+| Descrição | Casado. Sem filhos. Trabalha morando por temporada de poucos meses em uma cidade. |
+| Necessidades | Saber os melhores shoppings com melhor estacionamento. Como é a praça de alimentação. Nível de valor das lojas. |
 
-| | Perfil Nome |
+| | Manoel - 48 anos |
 |--------------------|-------|
-| Descrição | [WIP - perfil do dono] |
+| Descrição | Casado. três filhos. Dono de um bar onde ele mesmo atende. Tem pouca familiaridade com tecnologia. |
 | Necessidades | Entender os pontos em que pode melhorar seu atendimento/serviço para fidelizar mais clientes.  |
 
 
@@ -45,8 +45,8 @@
 | Enzo | Ver uma lista com todos os bares da minha cidade e saber qual tem a cerveja mais gelada | Decidir qual conhecer |
 | Enzo | Poder escrever uma avaliação dos bares que frequento | Saber qual deles é melhor para cada ocasião segundo meus gostos |
 | Marina | Saber quais restaurantes tem o raking mais alto no quesito amigável para crianças | Comemorar o aniversário do meu filho |
-| Dono | Cadastrar meu estabelecimento na plataforma | Receber feedback do seu serviço |
-| Dono | Definir em quais quesitos seu estabelecimento será avaliado | Segmentar as melhorias relevantes |
+| Manoel | Cadastrar meu estabelecimento na plataforma | Receber feedback do seu serviço |
+| Manoel | Definir em quais quesitos seu estabelecimento será avaliado | Segmentar as melhorias relevantes |
 | Clésio | Dar minha nota nos itens disponíveis | Incentivar futuras melhorias |
 
 ## Requisitos do Projeto

@@ -2,7 +2,7 @@
 
 `Analise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Desenvolvimento de Aplicação Web Front-End`
 
 `02-2023`
 
