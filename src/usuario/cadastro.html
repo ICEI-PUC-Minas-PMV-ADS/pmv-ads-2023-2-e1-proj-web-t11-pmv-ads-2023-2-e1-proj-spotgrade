@@ -20,7 +20,7 @@
 	  <header class="p-3 mb-3 border-bottom shadow-sm bg-light">
 	    <div class="container">
 	      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-	        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+	        <a href="https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t11-pmv-ads-2023-2-e1-proj-spotgrade/src/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
 	          <i class="fa-solid fa-bullseye fa-2xl"></i>
 	          &nbsp;SpotGrade
 	        </a>
@@ -75,15 +75,17 @@
 	  	  </div>
 
 	  	  <div class="row py-3"><!-- Formulario - Linha -->
-	  	    <div class="col">
 	  	      <label for="selectTipo" class="form-label">Spoter / Divulgador <span class="text-danger">*</span></label>
-			  <select class="form-select" aria-label="Escolha uma opção">
-			    <option selected disabled="disabled">Escolha uma opção</option>
-			    <option value="s">Spoter - busco lugares</option>
-			    <option value="d">Divulgador - Sou dono e quero ser encontrado</option>
-			  </select>
-	  	    </div>
 	  	    <div class="col">
+			  <input class="form-check-input" type="radio" name="tipoUsuario" id="flexRadiotipoDivulgador" checked="checked">
+			  <label class="form-check-label" for="flexRadioDefault1">
+			    Divulgador - Sou dono e quero ser encontrado
+			  </label>
+			  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			  <input class="form-check-input" type="radio" name="tipoUsuario" id="flexRadiotipoSpoter">
+			  <label class="form-check-label" for="flexRadioDefault1">
+			    Spoter - Quero conhecer novos lugares
+			  </label>
 	  	    </div>
 	  	  </div>
 
@@ -115,9 +117,9 @@
 	  	      <label for="exampleFormControlInput1" class="form-label">Estado</label>
 			  <select class="form-select" aria-label="Default select example">
 			    <option selected disabled="disabled">Escolha uma opção</option>
-			    <option value="1">Spoter - busco lugares</option>
-			    <option value="2">Divulgador - Sou dono e quero ser encontrado</option>
-			    <option value="2">Divulgador - Sou dono e quero ser encontrado</option>
+			    <option value="1">AC</option>
+			    <option value="2">DF</option>
+			    <option value="2">ES</option>
 			  </select>
 	  	    </div>
 	  	    <div class="col">
@@ -147,6 +149,7 @@
 	  	</div>
 	  </footer>
 
+	  <script src="cadastro.js"></script>
 	  <script src="../assets/js/default.js"></script>
 	  <script src="../assets/js/bootstrap.bundle.min.js"></script>
 	</body>
