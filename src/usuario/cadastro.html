@@ -49,7 +49,7 @@
 	  
 	  <content>
 	  	<div class="container h-100">
-	  	  <form action="../usuario/login.html" class=" needs-validation">
+	  	  <form class=" needs-validation" name="formCadUsuario" id="formCadUsuario" onsubmit="cadastraUsuario(this);">
 
 	  	  <div class="row py-5"><!-- Título -->
 	  	    <div class="col">
@@ -62,15 +62,15 @@
 	  	    	<span class="text-danger pb-3"> * - campos obrigatórios</span>
 	  	    <div class="col">
 	  	      <label for="inputName" class="form-label">Nome <span class="text-danger">*</span></label>
-			  <input type="text" class="form-control" id="inputName" required placeholder="Ex: Joana Maria">
+			  <input type="text" class="form-control" id="inputName" name="inputName" required placeholder="Ex: Joana Maria">
 	  	    </div>
 	  	    <div class="col">
 	  	      <label for="inputEmail" class="form-label">Email address <span class="text-danger">*</span></label>
-			  <input type="email" class="form-control" id="inputEmail" required placeholder="nome@exemplo.com">
+			  <input type="email" class="form-control" id="inputEmail" name="inputEmail" required placeholder="nome@exemplo.com">
 	  	    </div>
 	  	    <div class="col">
 	  	      <label for="inputTelefone" class="form-label">Telefone <span class="text-danger">*</span></label>
-			  <input type="phone" class="form-control" id="inputTelefone" required placeholder="(31) 99999-9999">
+			  <input type="phone" class="form-control" id="inputTelefone" name="inputTelefone" required placeholder="(31) 99999-9999">
 	  	    </div>
 	  	  </div>
 
@@ -88,34 +88,45 @@
 			  </label>
 	  	    </div>
 	  	  </div>
+	  	  
+	  	  <div class="row py-3"><!-- Formulario - Linha -->
+	  	      <div class="col-3">
+	  	        <label for="inputsenha" class="form-label">Senha <span class="text-danger">*</span></label>
+			    <input type="password" class="form-control" id="inputPassword" name="inputPassword" required >
+	  	      </div>
+	  	      <div class="col-3">
+	  	        <label for="inputsenha" class="form-label">Confirmar senha <span class="text-danger">*</span></label>
+			    <input type="password" class="form-control" id="inputConfirmPassword" name="inputConfirmPassword" required >
+	  	      </div>
+	  	  </div>
 
 	  	  <div class="row py-3 my-3 row-endereco border-top"><!-- Formulario - Linha -->
 	  	  	<h3 class="text-center"> Endereço </h3>
 	  	    <div class="col">
-	  	      <label for="exampleFormControlInput1" class="form-label">Rua</label>
-			  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	  	      <label for="inputRua" class="form-label">Rua</label>
+			  <input type="text" class="form-control" id="inputRua" name="inputRua" placeholder="name@example.com">
 	  	    </div>
 	  	    <div class="col-2">
-	  	      <label for="exampleFormControlInput1" class="form-label">Numero</label>
-			  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	  	      <label for="inputNumero" class="form-label">Numero</label>
+			  <input type="text" class="form-control" id="inputNumero" name="inputNumero" placeholder="name@example.com">
 	  	    </div>
 	  	    <div class="col-2">
-	  	      <label for="exampleFormControlInput1" class="form-label">complemento</label>
-			  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	  	      <label for="inputComplemento" class="form-label">complemento</label>
+			  <input type="text" class="form-control" id="inputComplemento" name="inputComplemento" placeholder="name@example.com">
 	  	    </div>
 	  	  </div>
 	  	  <div class="row pb-4 pt-1 mb-3 row-endereco border-bottom"><!-- Formulario - Linha -->
 	  	    <div class="col">
-	  	      <label for="exampleFormControlInput1" class="form-label">Bairro</label>
-			  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	  	      <label for="inputBairro" class="form-label">Bairro</label>
+			  <input type="text" class="form-control" id="inputBairro" name="inputBairro" placeholder="name@example.com">
 	  	    </div>
 	  	    <div class="col">
-	  	      <label for="exampleFormControlInput1" class="form-label">Cidade</label>
-			  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	  	      <label for="inputCidade" class="form-label">Cidade</label>
+			  <input type="text" class="form-control" id="inputCidade" name="inputCidade" placeholder="name@example.com">
 	  	    </div>
 	  	    <div class="col">
-	  	      <label for="exampleFormControlInput1" class="form-label">Estado</label>
-			  <select class="form-select" aria-label="Default select example">
+	  	      <label for="inputEstado" class="form-label">Estado</label>
+			  <select class="form-select" name="inputEstado" id="inputEstado" aria-label="Default select example">
 			    <option selected disabled="disabled">Escolha uma opção</option>
 			    <option value="1">AC</option>
 			    <option value="2">DF</option>
@@ -123,8 +134,8 @@
 			  </select>
 	  	    </div>
 	  	    <div class="col">
-	  	      <label for="exampleFormControlInput1" class="form-label">CEP</label>
-			  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+	  	      <label for="inputCEP" class="form-label">CEP</label>
+			  <input type="text" class="form-control" id="inputCEP" name="inputCEP" placeholder="name@example.com">
 	  	    </div>
 	  	  </div>
 
@@ -139,7 +150,7 @@
 	  	</div>
 	  </content>
 
-	  <footer class="bg-dark text-light py-3 fixed-bottom">
+	  <footer class="bg-dark text-light py-3 -bottom">
 	  	<div class="container">
 	  		<div class="row">
 	  			<div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae viverra enim, ac dignissim orci. Praesent sed elit rhoncus metus euismod mollis at eget dui.</div>
