@@ -12,7 +12,7 @@ Sistema de avaliação de estabelecimentos( frontend).
 
 * Filipe Lopes Gervasio 
 * Kênia Aparecida Caires Cardoso 
-* Ângelo Alvares de Abreu 
+* Angelo Alvares de Abreu Oliveira
 * Breno Vinicius 
 * Bruna Fachola 
 * Ygor Pedroso 
