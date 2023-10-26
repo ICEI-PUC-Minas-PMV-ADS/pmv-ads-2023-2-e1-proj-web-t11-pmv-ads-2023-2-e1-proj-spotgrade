@@ -30,3 +30,22 @@ function exibeEnderecos() {
 	   console.log(campos.item(i));
 	}
 }
+
+function cadastraUsuario(form) {
+	// body...
+	var usuario = [];
+
+	for (var i = form.length - 1; i >= 0; i--) {
+		console.log(form[i]);
+		console.log(form[i].name);
+		console.log(form[i].value);
+		usuario[form[i].name] = form[i].value;
+	}
+	
+	console.log(usuario);
+
+	AdicionarUsuario(usuario);
+	
+	return false;
+
+}
