@@ -38,8 +38,6 @@ function AdicionarUsuario(usuario){
   return true;
 }
 
-
-
 function validaSenhas(senhaA, senhaB){
 	return true;
 }
