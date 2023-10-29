@@ -48,7 +48,7 @@
 	  </header>
 	  
 	  <content>
-	  	<div class="container h-100">
+	  	<div class="container min-vh-100">
 	  	  <form class=" needs-validation" name="formCadUsuario" id="formCadUsuario" onsubmit="cadastraUsuario(this);">
 
 	  	  <div class="row py-5"><!-- Título -->
@@ -66,43 +66,81 @@
 		  	      <label for="inputName" class="form-label">Nome <span class="text-danger">*</span></label>
 				  <input type="text" class="form-control" id="inputName" name="inputName" required placeholder="Ex: Joana Maria">
 		  	    </div>
-		  	    <div class="w-100">
+		  	    <div class="w-100 py-2">
 		  	      <label for="inputlocal" class="form-label">localizacao <span class="text-danger">*</span></label>
 				  <input type="email" class="form-control" id="inputlocal" name="inputlocal" required placeholder="Rua: abc">
 		  	    </div>
-		  	    <div class="w-100">
-		  	      <label for="inputUm" class="form-label">
-				    <input type="checkbox" class="form-control" id="inputItemUm" name="inputItemUm" required />
-				    opção Um <span class="text-danger">*</span>
+		  	    <div class="w-100 py-2">
+		  	      <label for="inputTipoEstabelecimento" class="form-label">Tipo do estabelecimento</label>
+				  <select class="form-select" name="inputTipoEstabelecimento" id="inputTipoEstabelecimento" aria-label="Select de tipo de estabelecimento" onchange="mostraOpcoes(this.value)">
+				    <option selected disabled="disabled">Escolha uma opção</option>
+				    <option value="Bar">Bar</option>
+				    <option value="Restaurante">Restaurante</option>
+				    <option value="Teatro / Cinema">Teatro / Cinema</option>
+				    <option value="Hotel">Hotel</option>
+				    <option value="Shopping">Shopping</option>
+				  </select>
+		  	    </div>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemcerveja">
+		  	      <label for="inputItemcerveja" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemcerveja" name="inputItemcerveja" />&nbsp;&nbsp;Cerveja e gealada
 				  </label>
 		  	    </div>
-		  	    <div class="w-100">
-		  	      <label for="inputDois" class="form-label">
-				    <input type="checkbox" class="form-control" id="inputItemDois" name="inputItemDois" required />
-				    opção Dois <span class="text-danger">*</span>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemTempoPreparo">
+		  	      <label for="inputItemTempoPreparo" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemTempoPreparo" name="inputItemTempoPreparo" />&nbsp;&nbsp;Tempo de Preparo
 				  </label>
 		  	    </div>
-		  	    <div class="w-100">
-		  	      <label for="inputTres" class="form-label">
-				    <input type="checkbox" class="form-control" id="inputItemTres" name="inputItemTres" required />
-				    opção Tres <span class="text-danger">*</span>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemVisibilidade">
+		  	      <label for="inputItemVisibilidade" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemVisibilidade" name="inputItemVisibilidade" />&nbsp;&nbsp;Visibilidade
+				  </label>
+		  	    </div>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemEstacionamento">
+		  	      <label for="inputItemEstacionamento" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemEstacionamento" name="inputItemEstacionamento" />&nbsp;&nbsp;Estacionamento
+				  </label>
+		  	    </div>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemAlimentacao">
+		  	      <label for="inputItemAlimentacao" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemAlimentacao" name="inputItemAlimentacao" />&nbsp;&nbsp;Variedade de Alimentação
+				  </label>
+		  	    </div>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemrecreacao">
+		  	      <label for="inputItemrecreacao" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemrecreacao" name="inputItemrecreacao" />&nbsp;&nbsp;Recreção
+				  </label>
+		  	    </div>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemLocalidade">
+		  	      <label for="inputItemLocalidade" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemLocalidade" name="inputItemLocalidade" />&nbsp;&nbsp;Localidade
+				  </label>
+		  	    </div>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemAtendimento">
+		  	      <label for="inputItemAtendimento" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemAtendimento" name="inputItemAtendimento" />&nbsp;&nbsp;Atendimento
+				  </label>
+		  	    </div>
+		  	    <div class="w-100 py-2 checkOpcaoEstab" id="containerItemPreco">
+		  	      <label for="inputItemPreco" class="form-label">
+				    <input class="form-check-input" type="checkbox" id="inputItemPreco" name="inputItemPreco" />&nbsp;&nbsp;Preço
 				  </label>
 		  	    </div>
 		  	  </div>
 	  	  	  <div class="row py-3"><!-- Formulario - Linha -->
-		  	    <div class="w-100">
+		  	    <div class="w-100 py-2">
 		  	      <input type="submit" name="submit-form" value="Cadastrar" class="btn btn-primary" />
 		  	    </div>
 		  	  </div>
 	  	  	</div>
 
-	  	  	<div class="col"><img /></div>
+	  	  	<div class="col"><img src="https://placehold.co/500x500" class="img-fluid rounded" /></div>
 	  	  </div>
 	  	  </form>
 	  	</div>
 	  </content>
 
-	  <footer class="bg-dark text-light py-3 -bottom">
+	  <footer class="bg-dark text-light py-3">
 	  	<div class="container">
 	  		<div class="row">
 	  			<div class="col">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae viverra enim, ac dignissim orci. Praesent sed elit rhoncus metus euismod mollis at eget dui.</div>
