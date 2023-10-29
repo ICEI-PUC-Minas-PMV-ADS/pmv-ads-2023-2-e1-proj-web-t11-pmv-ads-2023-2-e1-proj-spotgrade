@@ -1,9 +1,21 @@
 //default
 var tbUsuario = localStorage.getItem("tbUsuario");
-tbUsuario = JSON.parse(tbUsuario); 
+tbUsuario = JSON.parse(tbUsuario);
+console.log(tbUsuario); 
 if(tbUsuario == null || tbUsuario == undefined){
   tbUsuario = [];
 }
+
+var tbUsuarioLogado = localStorage.getItem("tbUsuarioLogado");
+tbUsuarioLogado = JSON.parse(tbUsuarioLogado);
+if(tbUsuarioLogado == null || tbUsuarioLogado == undefined){
+  tbUsuarioLogado = [];
+}
+console.log(tbUsuarioLogado);
+  for (var i = tbUsuarioLogado.length - 1; i >= 0; i--) {
+    console.log(tbUsuarioLogado[i]);
+  }
+if (tbUsuarioLogado[0].nome != null) { document.getElementById("nomeUsuario").textContent = "Bem vindo: " + tbUsuarioLogado[0].nome + "";}
 
 
 //CRUD
@@ -42,7 +54,7 @@ function RecuperarUsuario(usuarioInfo){
   for (var i = tbUsuario.length - 1; i >= 0; i--) {
     var usuario = JSON.parse(tbUsuario[i]);
     console.log(usuario);
-    if (usuario.firstname == usuarioInfo) {
+    if (usuario.nome == usuarioInfo) {
       console.log("usuario encontrado");
       return usuario;
     }
