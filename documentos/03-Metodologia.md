@@ -5,9 +5,7 @@ A meotodologia ágil foi a escolha para esse projeto, SCRUM, que visa uma, “vi
 
 
 ## Gerenciamento de Projeto
-A metodologia ágil escolhida para o desenvolvimento deste projeto foi o SCRUM, pois como citam Amaral, Fleury e Isoni (2019, p. 68), seus benefícios são a
-
-“visão clara dos resultados a entregar; ritmo e disciplina necessários à execução; definição de papéis e responsabilidades dos integrantes do projeto (Scrum Owner, Scrum Master e Team); empoderamento dos membros da equipe de projetos para atingir o desafio; conhecimento distribuído e compartilhado de forma colaborativa; ambiência favorável para crítica às ideias e não às pessoas.”
+O projeto em desenvolvimento utiliza como base o SCRUM e para auxiliar na criação dos esboços do layout, tela de login, entre outros, o aplicativo marvelapp. Sendo assim, os papeis foram bem definidos, dessa forma utilizou-se dos artefatos, Backlog do produto, incremento do produto e Backlog. Dessa forma para organizar, dividir e guiar os membros da equipe, sobre quais atividades a serem feitas.
 
 ### Divisão de Papéis
 
@@ -16,15 +14,19 @@ A seguinte divisão foi feita para a organização do projeto:
 - Product Owner: Filipe
 - Equipe de Desenvolvimento: Alexsandra, Angelo, Breno, Bruna, Filipe, Kênia e Ygor
 - Equipe de Design: Alexsandra, Angelo, Breno, Bruna, Filipe, Kênia e Ygor
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t11-pmv-ads-2023-2-e1-proj-spotgrade/assets/145730747/b3adbecd-98b8-4baa-9a50-5353527cf907)
 
 ### Processo
 
-[Adicione informações sobre detalhes da implementação do Scrum seguido pela equipe. A equipe poderá fazer uso de ferramentas on-line (GitHub Project ou Trello) para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução. O quadro Kanban deverá apresentar a estrutura abaixo. Inserir despois das informações uma imagem do Kanban do projeto.]
+Assim, a equipe atribuiu a prioridades de entrega nas etapas do projeto de acordo com os prazos já predefinido pela instituição. Onde, cada etapa do projeto, a equipe se organizava através de reuniões para delegar as funções e atribui prioridades.
+Dessa forma, a imagem abaixo mostra como feito a separação do projeto. Outrossim, pode-se ver que na primeira coluna da esquerda encontra-se as atividades a serem iniciadas, na colona do meio as que estão em desenvolvimento e na coluna da direita o que já foi feito.
+
 - Backlog: recebe as tarefas a serem trabalhadas e representa o Product Backlog. Todas as atividades identificadas no decorrer do projeto também devem ser incorporadas a esta lista. 
 - To Do: Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando. 
 - Doing: Quando uma tarefa tiver sido iniciada, ela é movida para cá. 
 - Done: nesta lista são colocadas as tarefas que passaram pelos testes e controle de qualidade e estão prontos para ser entregues ao usuário. Não há mais edições ou revisões necessárias, ele está agendado e pronto para a ação.
+- Figura 1 - Quadro de divisões de tarefas:
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t11-pmv-ads-2023-2-e1-proj-spotgrade/assets/145730747/b1a524f9-dfd0-4543-8fef-d085e8e8d476)
+
 
 > **Links Úteis**:
 > - [Project management, made simple](https://github.com/features/project-management/)
