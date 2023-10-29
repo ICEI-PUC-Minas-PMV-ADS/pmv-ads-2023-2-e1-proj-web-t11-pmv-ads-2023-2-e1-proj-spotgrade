@@ -16,11 +16,7 @@ A seguinte divisão foi feita para a organização do projeto:
 - Product Owner: Filipe
 - Equipe de Desenvolvimento: Alexsandra, Angelo, Breno, Bruna, Filipe, Kênia e Ygor
 - Equipe de Design: Alexsandra, Angelo, Breno, Bruna, Filipe, Kênia e Ygor
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e1-proj-web-t11-pmv-ads-2023-2-e1-proj-spotgrade/assets/145730747/b3adbecd-98b8-4baa-9a50-5353527cf907)
 
 ### Processo
 
