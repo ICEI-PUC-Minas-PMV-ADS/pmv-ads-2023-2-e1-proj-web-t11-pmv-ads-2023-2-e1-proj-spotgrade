@@ -12,10 +12,21 @@ if(tbUsuarioLogado == null || tbUsuarioLogado == undefined){
   tbUsuarioLogado = [];
 }
 console.log(tbUsuarioLogado);
-  for (var i = tbUsuarioLogado.length - 1; i >= 0; i--) {
-    console.log(tbUsuarioLogado[i]);
-  }
+for (var i = tbUsuarioLogado.length - 1; i >= 0; i--) {
+  console.log(tbUsuarioLogado[i]);
+}
+var todosItens = document.getElementsByClassName("apenas-logado");
+for (var i = todosItens.length - 1; i >= 0; i--) {
+  // console.log(todosItens[i]);
+  todosItens.item(i).classList.add('d-none');
+}
 if (tbUsuarioLogado[0].nome != null) { document.getElementById("nomeUsuario").textContent = "Bem vindo: " + tbUsuarioLogado[0].nome + "";}
+if (tbUsuarioLogado[0].nome != null) { 
+  for (var i = todosItens.length - 1; i >= 0; i--) {
+    // console.log(todosItens[i]);
+    todosItens.item(i).classList.remove('d-none');
+  }
+}
 
 
 //CRUD
