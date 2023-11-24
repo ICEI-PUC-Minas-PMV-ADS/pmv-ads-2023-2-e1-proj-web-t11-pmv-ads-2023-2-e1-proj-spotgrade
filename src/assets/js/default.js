@@ -6,6 +6,13 @@ if(tbUsuario == null || tbUsuario == undefined){
   tbUsuario = [];
 }
 
+var tbEstabelecimento = localStorage.getItem("tbEstabelecimento");
+tbEstabelecimento = JSON.parse(tbEstabelecimento);
+console.log(tbEstabelecimento); 
+if(tbEstabelecimento == null || tbEstabelecimento == undefined){
+  tbEstabelecimento = [];
+}
+
 var tbUsuarioLogado = localStorage.getItem("tbUsuarioLogado");
 tbUsuarioLogado = JSON.parse(tbUsuarioLogado);
 if(tbUsuarioLogado == null || tbUsuarioLogado == undefined){
@@ -134,6 +141,37 @@ function Excluir(indice_selecionado){
   localStorage.setItem("tbUsuario", JSON.stringify(tbUsuario));
   console.log("Registro excluído.");
 }
+
+
+/* ------- estabelecimento ------- */
+
+function AdicionarEstabelecimento(estabelecimento){
+  console.log(estabelecimento);
+  var novoestabelecimento = JSON.stringify({
+    nome : estabelecimento['inputName'],
+    local     : estabelecimento['inputlocal'],
+    tipoEstabelecimento       : estabelecimento['inputTipoEstabelecimento'],
+    itemcerveja    : estabelecimento['inputItemcerveja'],
+    itemTempoPreparo    : estabelecimento['inputItemTempoPreparo'],
+    itemVisibilidade    : estabelecimento['inputItemVisibilidade'],
+    itemEstacionamento    : estabelecimento['inputItemEstacionamento'],
+    itemAlimentacao    : estabelecimento['inputItemAlimentacao'],
+    itemrecreacao    : estabelecimento['inputItemrecreacao'],
+    itemLocalidade    : estabelecimento['inputItemLocalidade'],
+    itemAtendimento       : estabelecimento['inputItemAtendimento'],
+    itemPreco  : estabelecimento['inputItemPreco'],
+    imgPath: estabelecimento['imgPath']
+  });
+
+  console.log(estabelecimento);
+  tbEstabelecimento.push(novoestabelecimento);
+  localStorage.setItem("tbEstabelecimento", JSON.stringify(tbEstabelecimento));
+  console.log("Estabelecimento adicionado.");
+
+  return true;
+}
+
+
 
 function validaSenhas(senhaA, senhaB){
 	return true;

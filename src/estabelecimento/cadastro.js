@@ -80,10 +80,31 @@ function cadastraEstabelecimento(form) {
 		console.log(form[i]);
 		console.log(form[i].name);
 		console.log(form[i].value);
-		Estabelecimento[form[i].name] = form[i].value;
+		estabelecimento[form[i].name] = form[i].value;
 	}
 	
 	console.log(estabelecimento);
+
+	var imgPath = document.querySelector("input[type=file]").files[0]; //('#inputGroupFile02');
+        var reader = new FileReader();
+
+        reader.addEventListener(
+          "load",
+          function () {
+            // convert image file to base64 string and save to localStorage
+            localStorage.setItem("image", reader.result);
+          },
+          false
+        );
+
+        if (imgPath) {
+          reader.readAsDataURL(imgPath);
+        }
+
+        // finalPath = {imgPath : localStorage.getItem("image")};
+  console.log(estabelecimento);
+        estabelecimento.push(imgPath: localStorage.getItem("image"));
+        // localStorage.getItem("image")
 
 	AdicionarEstabelecimento(estabelecimento);
 	
