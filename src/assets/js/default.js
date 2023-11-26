@@ -171,6 +171,55 @@ function AdicionarEstabelecimento(estabelecimento){
   return true;
 }
 
+function listarEstabelecimmentos(){
+  var estabelecimentos = JSON.parse(localStorage.getItem("tbEstabelecimento"));
+  var htmlLista = '<div class="row py-5">';
+  // console.log(estabelecimentos);
+  for (var i = 0; i < estabelecimentos.length; i++) {
+      console.log(i+1);
+    /*if (!((i+1) % 3)) {
+      htmlLista += '<div class="row py-5">';
+      console.log(i+1);
+    }*/
+    // console.log(estabelecimentos[i]);
+    var estabelecimento = JSON.parse(estabelecimentos[i]);
+    // console.log(estabelecimento);
+    // console.log(estabelecimento.nome);
+    // console.log(estabelecimento.local);
+    // console.log(estabelecimento.tipoEstabelecimento);
+    // console.log(estabelecimento.itemcerveja);
+    // console.log(estabelecimento.itemTempoPreparo);
+    // console.log(estabelecimento.itemVisibilidade);
+    // console.log(estabelecimento.itemEstacionamento);
+    // console.log(estabelecimento.itemAlimentacao);
+    // console.log(estabelecimento.itemrecreacao);
+    // console.log(estabelecimento.itemLocalidade);
+    // console.log(estabelecimento.itemAtendimento);
+    // console.log(estabelecimento.itemPreco);
+    // console.log(estabelecimento.imgPath);
+
+    htmlLista += '  <div class="col">';
+    htmlLista += '    <div class="card w-100" style="width: 18rem;">';
+    htmlLista += '      <img src="' + estabelecimento.imgPath + '" class="card-img-top" alt="...">';
+    htmlLista += '      <div class="card-body">';
+    htmlLista += '        <h5 class="card-title">' + estabelecimento.nome + '</h5>';
+    htmlLista += '        <p class="card-text">' + estabelecimento.local + '</p>';
+    htmlLista += '        <a href="#" class="btn btn-primary">Detalhes</a>';
+    htmlLista += '      </div>';
+    htmlLista += '    </div>';
+    htmlLista += '  </div>';
+
+    if (!((i+1) % 3)) {
+      console.log(i+1)
+      htmlLista += '</div>';
+      htmlLista += '<div class="row py-5">';
+    }
+  }
+
+  console.log(htmlLista);
+  document.getElementById("listaIndex").innerHTML = htmlLista;
+
+}
 
 
 function validaSenhas(senhaA, senhaB){
