@@ -1,8 +1,15 @@
 //Login.js
 
+function deslogar() {
+	localStorage.removeItem("tbUsuarioLogado");
+	console.log(localStorage.getItem("tbUsuarioLogado"));
+
+}
+
 function logar() {
 	var usuarioInfo = document.getElementById("email").value;
 	var senha = document.getElementById("password").value;
+	localStorage.removeItem("tbUsuarioLogado");
 
 	console.log(usuarioInfo, senha);
 
@@ -17,7 +24,7 @@ function logar() {
 	    	tbUsuarioLogado.push(usuario);
 	    	localStorage.setItem("tbUsuarioLogado", JSON.stringify(tbUsuarioLogado));
 	    	console.log(tbUsuarioLogado);
-          window.location.replace("../index.html");
+          window.location.replace("https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t11-pmv-ads-2023-2-e1-proj-spotgrade/src/");
 	    }
 	    return usuario;
 	  }
@@ -29,7 +36,7 @@ function logar() {
 	    	tbUsuarioLogado.push(usuario);
 	    	localStorage.setItem("tbUsuarioLogado", JSON.stringify(tbUsuarioLogado));
 	    	console.log(tbUsuarioLogado);
-          window.location.replace("../index.html");
+          window.location.replace("https://icei-puc-minas-pmv-ads.github.io/pmv-ads-2023-2-e1-proj-web-t11-pmv-ads-2023-2-e1-proj-spotgrade/src/");
 	    }
 	    return usuario;
 	  }

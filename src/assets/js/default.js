@@ -8,7 +8,7 @@ if(tbUsuario == null || tbUsuario == undefined){
 
 var tbEstabelecimento = localStorage.getItem("tbEstabelecimento");
 tbEstabelecimento = JSON.parse(tbEstabelecimento);
-console.log(tbEstabelecimento); 
+// console.log(tbEstabelecimento); 
 if(tbEstabelecimento == null || tbEstabelecimento == undefined){
   tbEstabelecimento = [];
 }
@@ -18,7 +18,8 @@ tbUsuarioLogado = JSON.parse(tbUsuarioLogado);
 if(tbUsuarioLogado == null || tbUsuarioLogado == undefined){
   tbUsuarioLogado = [];
 }
-console.log(tbUsuarioLogado);
+// localStorage.removeItem("tbUsuarioLogado");
+// console.log(tbUsuarioLogado);
 for (var i = tbUsuarioLogado.length - 1; i >= 0; i--) {
   console.log(tbUsuarioLogado[i]);
 }
@@ -27,8 +28,8 @@ for (var i = todosItens.length - 1; i >= 0; i--) {
   // console.log(todosItens[i]);
   todosItens.item(i).classList.add('d-none');
 }
-if (tbUsuarioLogado[0].nome != null) { document.getElementById("nomeUsuario").textContent = "Bem vindo: " + tbUsuarioLogado[0].nome + "";}
-if (tbUsuarioLogado[0].nome != null) { 
+if (Array.isArray(tbUsuarioLogado) && tbUsuarioLogado[0].nome != null) { document.getElementById("nomeUsuario").textContent = "Bem vindo: " + tbUsuarioLogado[0].nome + " | " + tbUsuarioLogado[0].tipo + "";}
+if (Array.isArray(tbUsuarioLogado) && tbUsuarioLogado[0].nome != null) { 
   for (var i = todosItens.length - 1; i >= 0; i--) {
     // console.log(todosItens[i]);
     todosItens.item(i).classList.remove('d-none');
@@ -146,10 +147,7 @@ function Excluir(indice_selecionado){
 /* ------- estabelecimento ------- */
 
 function AdicionarEstabelecimento(estabelecimento){
-  console.log(estabelecimento);
-  console.log(estabelecimento['inputName']);
-  console.log(estabelecimento['inputlocal']);
-  console.log(estabelecimento[0].imgPath);
+  // console.log(estabelecimento);
   var novoestabelecimento = JSON.stringify({
     nome : estabelecimento['inputName'],
     local     : estabelecimento['inputlocal'],
@@ -199,9 +197,9 @@ function listarEstabelecimmentos(){
     // console.log(estabelecimento.itemLocalidade);
     // console.log(estabelecimento.itemAtendimento);
     // console.log(estabelecimento.itemPreco);
-    console.log(estabelecimento.imgPath);
+    // console.log(estabelecimento.imgPath);
 
-    htmlLista += '  <div class="col">';
+    htmlLista += '  <div class="col-4">';
     htmlLista += '    <div class="card w-100" style="width: 18rem;">';
     htmlLista += '      <img src="' + estabelecimento.imgPath + '" class="card-img-top" alt="...">';
     htmlLista += '      <div class="card-body">';
@@ -213,9 +211,42 @@ function listarEstabelecimmentos(){
     htmlLista += '  </div>';
 
     if (!((i+1) % 3)) {
-      console.log(i+1)
+      // console.log(i+1)
       htmlLista += '</div>';
       htmlLista += '<div class="row py-5">';
+    }
+  }
+
+  // console.log(htmlLista);
+  document.getElementById("listaIndex").innerHTML = htmlLista;
+
+}
+
+
+function listarEstabelecimmentosCustom(tipo){
+  var estabelecimentos = JSON.parse(localStorage.getItem("tbEstabelecimento"));
+  var htmlLista = '<div class="row py-5">';
+  // console.log(estabelecimentos);
+  for (var i = 0; i < estabelecimentos.length; i++) {
+    var estabelecimento = JSON.parse(estabelecimentos[i]);
+    if( estabelecimento.tipoEstabelecimento == tipo){
+    
+        htmlLista += '  <div class="col-4">';
+        htmlLista += '    <div class="card w-100" style="width: 18rem;">';
+        htmlLista += '      <img src="' + estabelecimento.imgPath + '" class="card-img-top" alt="...">';
+        htmlLista += '      <div class="card-body">';
+        htmlLista += '        <h5 class="card-title">' + estabelecimento.nome + '</h5>';
+        htmlLista += '        <p class="card-text">' + estabelecimento.local + '</p>';
+        htmlLista += '        <a href="#" class="btn btn-primary">Detalhes</a>';
+        htmlLista += '      </div>';
+        htmlLista += '    </div>';
+        htmlLista += '  </div>';
+    
+        if (!((i+1) % 3)) {
+          // console.log(i+1)
+          htmlLista += '</div>';
+          htmlLista += '<div class="row py-5">';
+        }
     }
   }
 
@@ -228,3 +259,4 @@ function listarEstabelecimmentos(){
 function validaSenhas(senhaA, senhaB){
 	return true;
 }
+
