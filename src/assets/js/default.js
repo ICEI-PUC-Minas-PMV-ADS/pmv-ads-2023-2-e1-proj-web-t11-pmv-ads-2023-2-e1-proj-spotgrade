@@ -147,6 +147,9 @@ function Excluir(indice_selecionado){
 
 function AdicionarEstabelecimento(estabelecimento){
   console.log(estabelecimento);
+  console.log(estabelecimento['inputName']);
+  console.log(estabelecimento['inputlocal']);
+  console.log(estabelecimento[0].imgPath);
   var novoestabelecimento = JSON.stringify({
     nome : estabelecimento['inputName'],
     local     : estabelecimento['inputlocal'],
@@ -160,7 +163,7 @@ function AdicionarEstabelecimento(estabelecimento){
     itemLocalidade    : estabelecimento['inputItemLocalidade'],
     itemAtendimento       : estabelecimento['inputItemAtendimento'],
     itemPreco  : estabelecimento['inputItemPreco'],
-    imgPath: estabelecimento['imgPath']
+    imgPath: estabelecimento[0].imgPath
   });
 
   console.log(estabelecimento);
@@ -176,7 +179,7 @@ function listarEstabelecimmentos(){
   var htmlLista = '<div class="row py-5">';
   // console.log(estabelecimentos);
   for (var i = 0; i < estabelecimentos.length; i++) {
-      console.log(i+1);
+      // console.log(i+1);
     /*if (!((i+1) % 3)) {
       htmlLista += '<div class="row py-5">';
       console.log(i+1);
@@ -196,7 +199,7 @@ function listarEstabelecimmentos(){
     // console.log(estabelecimento.itemLocalidade);
     // console.log(estabelecimento.itemAtendimento);
     // console.log(estabelecimento.itemPreco);
-    // console.log(estabelecimento.imgPath);
+    console.log(estabelecimento.imgPath);
 
     htmlLista += '  <div class="col">';
     htmlLista += '    <div class="card w-100" style="width: 18rem;">';
@@ -216,7 +219,7 @@ function listarEstabelecimmentos(){
     }
   }
 
-  console.log(htmlLista);
+  // console.log(htmlLista);
   document.getElementById("listaIndex").innerHTML = htmlLista;
 
 }

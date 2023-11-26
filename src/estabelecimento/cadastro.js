@@ -74,6 +74,7 @@ function ligaOpcoesShopping() {
 
 function cadastraEstabelecimento(form) {
 	// body...
+	// console.log(form);
 	var estabelecimento = [];
 
 	for (var i = form.length - 1; i >= 0; i--) {
@@ -86,28 +87,33 @@ function cadastraEstabelecimento(form) {
 	console.log(estabelecimento);
 
 	var imgPath = document.querySelector("input[type=file]").files[0]; //('#inputGroupFile02');
-        var reader = new FileReader();
+    var reader = new FileReader();
 
-        reader.addEventListener(
-          "load",
-          function () {
-            // convert image file to base64 string and save to localStorage
-            localStorage.setItem("image", reader.result);
-          },
-          false
-        );
+    reader.addEventListener(
+      "load",
+      function () {
+          // convert image file to base64 string and save to localStorage
+          localStorage.setItem("image", reader.result);
+        },
+        false
+    );
+    localStorage.removeItem("image");
+    if (imgPath) {
+      reader.readAsDataURL(imgPath);
+    }
 
-        if (imgPath) {
-          reader.readAsDataURL(imgPath);
-        }
-
-        // finalPath = {imgPath : localStorage.getItem("image")};
-  console.log(estabelecimento);
-        estabelecimento.push(imgPath: localStorage.getItem("image"));
+    // finalPath = {imgPath : localStorage.getItem("image")};
+    document.getElementById('exampleModalLive').classList.remove('d-none');
+  	
+  	setTimeout(() => { 
+        estabelecimento.push({'imgPath':localStorage.getItem("image")});
         // localStorage.getItem("image")
-
-	AdicionarEstabelecimento(estabelecimento);
+		var cadastro = AdicionarEstabelecimento(estabelecimento);
+  		console.log(estabelecimento);
+		if (cadastro){
+			window.location.replace("../index.html");
+		}
+    }, 5000);
 	
-	return false;
 
 }
