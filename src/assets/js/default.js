@@ -6,16 +6,34 @@ if(tbUsuario == null || tbUsuario == undefined){
   tbUsuario = [];
 }
 
+var tbEstabelecimento = localStorage.getItem("tbEstabelecimento");
+tbEstabelecimento = JSON.parse(tbEstabelecimento);
+console.log(tbEstabelecimento); 
+if(tbEstabelecimento == null || tbEstabelecimento == undefined){
+  tbEstabelecimento = [];
+}
+
 var tbUsuarioLogado = localStorage.getItem("tbUsuarioLogado");
 tbUsuarioLogado = JSON.parse(tbUsuarioLogado);
 if(tbUsuarioLogado == null || tbUsuarioLogado == undefined){
   tbUsuarioLogado = [];
 }
 console.log(tbUsuarioLogado);
-  for (var i = tbUsuarioLogado.length - 1; i >= 0; i--) {
-    console.log(tbUsuarioLogado[i]);
-  }
+for (var i = tbUsuarioLogado.length - 1; i >= 0; i--) {
+  console.log(tbUsuarioLogado[i]);
+}
+var todosItens = document.getElementsByClassName("apenas-logado");
+for (var i = todosItens.length - 1; i >= 0; i--) {
+  // console.log(todosItens[i]);
+  todosItens.item(i).classList.add('d-none');
+}
 if (tbUsuarioLogado[0].nome != null) { document.getElementById("nomeUsuario").textContent = "Bem vindo: " + tbUsuarioLogado[0].nome + "";}
+if (tbUsuarioLogado[0].nome != null) { 
+  for (var i = todosItens.length - 1; i >= 0; i--) {
+    // console.log(todosItens[i]);
+    todosItens.item(i).classList.remove('d-none');
+  }
+}
 
 
 //CRUD
@@ -123,6 +141,89 @@ function Excluir(indice_selecionado){
   localStorage.setItem("tbUsuario", JSON.stringify(tbUsuario));
   console.log("Registro excluído.");
 }
+
+
+/* ------- estabelecimento ------- */
+
+function AdicionarEstabelecimento(estabelecimento){
+  console.log(estabelecimento);
+  console.log(estabelecimento['inputName']);
+  console.log(estabelecimento['inputlocal']);
+  console.log(estabelecimento[0].imgPath);
+  var novoestabelecimento = JSON.stringify({
+    nome : estabelecimento['inputName'],
+    local     : estabelecimento['inputlocal'],
+    tipoEstabelecimento       : estabelecimento['inputTipoEstabelecimento'],
+    itemcerveja    : estabelecimento['inputItemcerveja'],
+    itemTempoPreparo    : estabelecimento['inputItemTempoPreparo'],
+    itemVisibilidade    : estabelecimento['inputItemVisibilidade'],
+    itemEstacionamento    : estabelecimento['inputItemEstacionamento'],
+    itemAlimentacao    : estabelecimento['inputItemAlimentacao'],
+    itemrecreacao    : estabelecimento['inputItemrecreacao'],
+    itemLocalidade    : estabelecimento['inputItemLocalidade'],
+    itemAtendimento       : estabelecimento['inputItemAtendimento'],
+    itemPreco  : estabelecimento['inputItemPreco'],
+    imgPath: estabelecimento[0].imgPath
+  });
+
+  console.log(estabelecimento);
+  tbEstabelecimento.push(novoestabelecimento);
+  localStorage.setItem("tbEstabelecimento", JSON.stringify(tbEstabelecimento));
+  console.log("Estabelecimento adicionado.");
+
+  return true;
+}
+
+function listarEstabelecimmentos(){
+  var estabelecimentos = JSON.parse(localStorage.getItem("tbEstabelecimento"));
+  var htmlLista = '<div class="row py-5">';
+  // console.log(estabelecimentos);
+  for (var i = 0; i < estabelecimentos.length; i++) {
+      // console.log(i+1);
+    /*if (!((i+1) % 3)) {
+      htmlLista += '<div class="row py-5">';
+      console.log(i+1);
+    }*/
+    // console.log(estabelecimentos[i]);
+    var estabelecimento = JSON.parse(estabelecimentos[i]);
+    // console.log(estabelecimento);
+    // console.log(estabelecimento.nome);
+    // console.log(estabelecimento.local);
+    // console.log(estabelecimento.tipoEstabelecimento);
+    // console.log(estabelecimento.itemcerveja);
+    // console.log(estabelecimento.itemTempoPreparo);
+    // console.log(estabelecimento.itemVisibilidade);
+    // console.log(estabelecimento.itemEstacionamento);
+    // console.log(estabelecimento.itemAlimentacao);
+    // console.log(estabelecimento.itemrecreacao);
+    // console.log(estabelecimento.itemLocalidade);
+    // console.log(estabelecimento.itemAtendimento);
+    // console.log(estabelecimento.itemPreco);
+    console.log(estabelecimento.imgPath);
+
+    htmlLista += '  <div class="col">';
+    htmlLista += '    <div class="card w-100" style="width: 18rem;">';
+    htmlLista += '      <img src="' + estabelecimento.imgPath + '" class="card-img-top" alt="...">';
+    htmlLista += '      <div class="card-body">';
+    htmlLista += '        <h5 class="card-title">' + estabelecimento.nome + '</h5>';
+    htmlLista += '        <p class="card-text">' + estabelecimento.local + '</p>';
+    htmlLista += '        <a href="#" class="btn btn-primary">Detalhes</a>';
+    htmlLista += '      </div>';
+    htmlLista += '    </div>';
+    htmlLista += '  </div>';
+
+    if (!((i+1) % 3)) {
+      console.log(i+1)
+      htmlLista += '</div>';
+      htmlLista += '<div class="row py-5">';
+    }
+  }
+
+  // console.log(htmlLista);
+  document.getElementById("listaIndex").innerHTML = htmlLista;
+
+}
+
 
 function validaSenhas(senhaA, senhaB){
 	return true;
